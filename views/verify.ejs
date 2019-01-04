@@ -1,0 +1,224 @@
+<% include partials/header %> 
+
+<style type="text/css">
+
+.breadcrumbs-area{
+	background: #f6f6f6 url("/src/images/background.jpg");
+	background-size: cover;
+	margin: 0;
+	padding: 120px 0 200px;
+}
+.container {
+  max-width: 100%;
+}
+.breadcrumb-content h2{
+	color: #333333;
+	font-size: 36px;
+	font-weight: 500;
+	margin: 0 0 20px;
+	text-transform: uppercase;
+}
+.breadcrumb-content ul li{
+	display:inline-block;
+	text-decoration: none;
+}
+.breadcrumb-content ul li a{
+	color: #707070;
+	text-transform: uppercase;
+}
+.breadcrumb-content ul li.active a{
+	color: #ee3333;
+}
+/* LOGIN */
+/*#login-box
+{
+ margin:0 auto;
+ padding:0px;
+ text-align:center;
+ width:995px;
+}*/
+.login-box {
+  background: #fff none repeat scroll 0 0;
+  text-align: center;
+  margin-right: 200px;
+  margin-left: 200px;
+  margin-top: -80px;
+  padding: 80px 30px 20px;
+}
+#register_div
+{
+ display:none;
+}
+section
+{
+ background-color:white;
+ width:700px;
+ height: auto;
+ box-sizing:border-box;
+ text-align: center;
+ margin-left: 60px;
+ margin-right: 60px;
+ box-shadow:0px 0px 10px 0px #122A0A;
+}
+section h1 p
+{
+ margin-top: 3px;
+ margin-bottom: 3px;	
+ color:#21610B;
+ font-size:30px;
+ background-color:#CEF6CE;
+ height:70px;
+ line-height:65px;
+}
+
+.form-group label {
+	display: block;
+}
+
+.form-group input {
+	width: 300px;
+	height: 40px;
+	border-radius: 35px;
+	line-height: none;
+	outline: none;
+	padding: 4px;
+	border: 1px solid darkgrey;
+}
+/*section input[type="text"]
+{
+ width:220px;
+ height:40px;
+ padding-left:5px;
+ font-size:15px;
+}
+section input[type="email"]
+{
+ width:220px;
+ height:40px;
+ padding-left:5px;
+ font-size:15px;
+}
+section input[type="password"]
+{
+ width:220px;
+ height:40px;
+ padding-left:5px;
+ font-size:15px;
+}*/
+/*.signInBtn
+{
+ width:300px;
+ height:40px;
+ background-color:blue;
+ border:none;
+ color:white;
+ font-weight:500;
+}*/
+.signInBtn:hover {
+	
+}
+section .change_link
+{
+ color:#21610B;
+}
+section .change_link input[type="button"]
+{
+ background:none;
+ border:none;
+ text-decoration:underline;
+ color:#2E64FE;
+ font-size:15px;
+ cursor:pointer;
+}
+</style>
+
+<!--breadcrumbs-area-start-->
+		<div class="breadcrumbs-area">
+			<div class="container">
+				<div class="row">
+					<div class="col-lg-12">
+						<div class="breadcrumb-content text-center">
+							<h2>WELCOME</h2>
+							<p>Please <b>Verify</b> to Access your Account!</p>
+							<ul style="text-align: center; font-size: 16px;">
+								<li><a href="#">Home /</a></li>
+								<li class="active"><a href="/verify">Verify</a></li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div> <!--breadcrumbs-area ended-->
+
+		<!--login box started-->
+		<div class="login-box animated fadeIn">
+        <section id="login_div">
+ 			<form action="/verify" autocomplete="on" method="POST">
+  			<h1><p class="text-center">Verify Your Email</p></h1>
+  			<div class="form-group">
+  				<label>Secret Token</label>
+  				<input name="secretToken" type="text" placeholder="Secret Token" id="secretToken"/>
+  			</div>
+  			<div class="form-group signInBtn"><input type="submit" value="Verify Email"/></div>
+        <a href="/phone_verify">Or Send an Sms</a>
+ 			</form>
+		</section>
+
+		<!--<section id="register_div">
+ 			<form action="/login" autocomplete="on">
+  			<h1><p><i class="fa fa-lg fa-fw fa-user"></i>SIGN UP</p></h1>
+  			<div class="name">
+  				<div class="form-group">
+  					<label>FirstName</label>
+  					<input name="firstname" id="name" required="required" type="text" placeholder="firstname" />
+  					<span id="firstname" class="text-danger"></span>
+  				</div>
+  				<div class="form-group">
+  					<label>LastName</label>
+  					<input name="lastname" id="name" required="required" type="text" placeholder="lastname"/>
+  				</div>
+  			</div>
+  			<div class="form-group">
+  				<label>Email</label>
+  				<input name="email" id="email" required="required" type="email" placeholder="Email" />
+  			</div>
+  			<div class="form-group">
+  				<label>Pnone No</label>
+  				<input name="phone" id="phone" required="required" type="text" placeholder="Phone no" onsubmit="validatePhone();" />
+  			</div>
+  			<div class="form-group">
+  				<label>Password</label>
+  				<input name="password" required="required" type="password" placeholder="password"/>
+  			</div>
+  			<div class="form-group">
+  				<label>Confirm Password</label>
+  				<input name="password_confirm" required="required" type="password" placeholder="password"/>
+  			</div>
+  			<div class="form-group">
+  				<input type="submit" value="SIGN UP"/>
+  			</div>
+  			<div class="change_link class="form-group"">Already a member?<input type="button" onclick="show_login();" value="Log in">
+  			</div>
+ 			</form>
+		</section>-->
+      </div><!--login box ended-->
+      <!--<script type="text/javascript">
+      	function show_signup()
+{
+ $("#login_div").fadeOut('fast', function() {
+  $("#register_div").fadeIn();
+ });
+}
+function show_login()
+{
+ $("#register_div").fadeOut('fast', function() {
+  $("#login_div").fadeIn();
+ });
+}
+/*function show_forget() {
+	$(".signUp-form.login-form").fadeOut("fast", function() {
+		$(".forget-form").fadeIn();
+	})
+}*/
+      </script>-->
+<% include partials/footer %> 

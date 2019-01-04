@@ -1,0 +1,17 @@
+@media (min-width: 992px) and (max-width: 1169px) {
+	.slider-text h2{
+		 margin: 40px 0 0;
+	}
+	.single-blog-2 .blog-2-content h3 a {
+		font-size: 17px;
+	}
+	#gallery a {
+		margin-right: 8px;
+		margin-bottom: 10px;
+	}
+	.home-2 .menu-area ul li {
+		margin-right: 18px;
+     }
+
+	}
+}

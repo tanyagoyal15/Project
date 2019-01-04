@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0 user-scalable=no">
+
+	<title>Project</title>
+
+	<link rel="stylesheet" href="/stylesheets/ionicons.min.css">
+	<link rel="stylesheet" href="/stylesheets/bootstrap.min.css">
+	<link rel="stylesheet" href="/stylesheets/font-awesome.min.css">
+	<link rel="stylesheet" href="/stylesheets/animate.css">
+	<link rel="stylesheet" href="/stylesheets/jquery-ui.min.css">
+	<link rel="stylesheet" href="/stylesheets/meanmenu.min.css">
+    <link rel="stylesheet" href="/stylesheets/owl.carousel.css">
+	<link rel="stylesheet" type="text/css" href="/stylesheets/main.css">
+	<link rel="stylesheet" type="text/css" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+	<link rel="stylesheet" type="text/css" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.0/animate.min.css">
+	<link rel="stylesheet" type="text/css" href="/stylesheets/_grid-framework.scss">
+	<!--<link rel="stylesheet" type="text/css" href="https://stackpath.bootstrapcdn.com/bootstrap/scss/mixins/_grid-framework.scss">-->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<script src="js/vendor/jquery-1.12.0.min.js"></script>
+	<script src="js/jquery.counterup.min.js"></script>
+	<script src="js/vendor/modernizr-2.8.3.min.js"></script>
+</head> 
+<body>
+	<div id="page-wrapper">
+		<!--header area start-->
+		<header>
+			<!--header-top-area-start-->
+			<div class="header-top-area" id="sticky-header">
+				<div class="container-fluid">
+					<div class="row" >
+						<!--1st column-->
+						<div class="col-lg-2 col-md-2 col-sm-6 col-xs-6">
+							<!-- logo area start-->
+							<div class="logo-area">
+								<img src="img/slider/logo.png">
+							</div> 
+							<!--logo area end-->
+						</div>
+						<!--2nd column-->
+						<div class="col-lg-7 col-md-7 col-sm-6 col-xs-6">
+							<!--menu area start-->
+							<div class="menu-area">
+								<nav>
+									<div class="toggle">
+										<i class="fa fa-bars menu"></i>
+									</div>
+									<ul> <!--Main navbar menu-->
+										 <!--Home-->
+										<li class="active"><a href="/">Home</a>
+											
+										</li> <!--home ended-->
+
+										<!--Men-->
+										<li><a href="/">Products</a>
+											
+										</li> <!--men ended-->
+
+										<!--Accessories-->
+										<li><a href="/">Services</a>
+											
+										</li> <!--accessories ended-->
+
+										<!--Women-->
+										<li><a href="/">Contact</a>
+
+										</li> <!--Women ended-->
+
+										<!--Blog-->
+										<li><a href="/">Blog</a>
+												<ul class="sub-menu">
+													<li><a href="blog.html">blog</a></li>
+													<li><a href="blog-details.html">blog details</a></li>
+												</ul>
+										</li> <!--blog ended-->
+									</ul>
+								</nav>
+							</div> <!--menu area end-->
+						</div>
+						<!--3rd column-->
+						<div class="col-lg-3 col-md-3 col-sm-5 col-xs-6">
+							<!--header right area starts-->
+							<div class="header-right-area">
+								<ul id="menus">
+									<%if (isAuthenticated){%>
+									<li>
+										<a href="/dashboard">Dashboard</a>
+									</li>
+									<li>
+										<a href="/logout">Logout</a>
+									</li>
+									<%}else {%>
+									<!--menu-->
+									<li>
+										<a href="/register"><i class="fa fa-user-plus"></i>Register</a>
+									</li>
+									<li>
+										<a href="/login"><i class="fa fa-sign-in"></i>Login</a>
+									</li>
+									<!--menu ended-->
+								    <%}%>
+								</ul>
+							</div> <!--header-right area ended-->
+						</div>
+					</div>
+				</div>				
+		 	</div> <!--header-top-area ended-->
+		</header> <!--header-area-end-->
+
+		<script type="text/javascript">
+			$(document).ready(function() {
+				$(".menu").click(function() {
+					$("ul").toggleClass("active");
+				});
+			});
+		</script>
+
+	
